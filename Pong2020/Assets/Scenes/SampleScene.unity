@@ -280,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 703204182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.004, y: -0.018, z: 3}
-  m_LocalScale: {x: 22.308592, y: 10.013824, z: 1}
+  m_LocalScale: {x: 22.3085, y: 10.013824, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -295,6 +295,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1657095874}
   - component: {fileID: 1657095873}
+  - component: {fileID: 1657095876}
+  - component: {fileID: 1657095875}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -360,12 +362,45 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657095872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.0818, y: -4.7889, z: -3}
+  m_LocalPosition: {x: -4.77, y: -4.8, z: -3}
   m_LocalScale: {x: 4.422395, y: 0.41480723, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1657095875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657095872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656f379807dcf4a45a0156c92371f799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1657095876
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657095872}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1795414119
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1795414121}
   - component: {fileID: 1795414120}
+  - component: {fileID: 1795414122}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -447,3 +483,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1795414122
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795414119}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
