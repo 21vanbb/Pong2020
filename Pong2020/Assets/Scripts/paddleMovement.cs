@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class paddleMovement : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 15.0f;
     public float xRange = 6.9f; 
 
     // Start is called before the first frame update
