@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class paddleMovement : MonoBehaviour
 {
-    public float speed = 15.0f;
-    public float xRange = 6.9f; 
+    public float speed = 50.0f;
+    public float rightScreen;
+    public float leftScreen;
+    public float xRange = 6.9f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,24 +18,16 @@ public class paddleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        float horizontal = Input.GetAxis("Horizontal");
+        transform.Translate(Vector2.right * horizontal * Time.deltaTime * speed);
+        if(transform.position.x < leftScreen)
         {
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.position = new Vector2(leftScreen, transform.position.y);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (transform.position.x > rightScreen)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-        }
-    }
-    private void LateUpdate()
-    {
-        if (transform.position.x > xRange)
-        {
-            transform.position = new Vector2(xRange, transform.position.y);
-        }
-        if (transform.position.x < -xRange)
-        {
-            transform.position = new Vector2(-xRange, transform.position.y);
+            transform.position = new Vector2(rightScreen, transform.position.y);
         }
     }
 }
+//16:08 on first video
