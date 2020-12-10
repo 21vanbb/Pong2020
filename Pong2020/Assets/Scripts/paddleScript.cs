@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class paddleScript : MonoBehaviour
 {
-    public float speed;
+    public float speed = 5.0f;
     public float rightEdge;
     public float leftEdge;
-    public float xRange = 6.9f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,16 +27,17 @@ public class paddleScript : MonoBehaviour
         {
             transform.position = new Vector2(rightEdge, transform.position.y);
         }
-    }
-    private void LateUpdate()
-    {
-        if (transform.position.x > xRange)
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position = new Vector2(xRange, transform.position.y);
+            Vector3 position = this.transform.position;
+            position.x--;
+            this.transform.position = position;
         }
-        if (transform.position.x< -xRange)
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position = new Vector2(-xRange, transform.position.y); 
+            Vector3 position = this.transform.position;
+            position.x++;
+            this.transform.position = position; 
         }
     }
 }
